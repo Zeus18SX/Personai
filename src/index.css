@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-emerald-500: #00FF87;
+  --color-blue-500: #00D4FF;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0D0D0D] text-white antialiased;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior-y: none;
+  }
+}
+
+/* Safe Area Insets for modern mobile browsers */
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.safe-mb {
+  margin-bottom: env(safe-area-inset-bottom);
+}
+
+/* Active state for touch devices */
+.touch-active:active {
+  opacity: 0.7;
+  transform: scale(0.96);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
